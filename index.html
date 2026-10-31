@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transporte Escolar Tio Rodrigo e Tia Dani</title>
+<meta name="description" content="Transporte escolar com segurança e carinho. Atendemos as escolas Intellectus e Dias Lemos. Consulte se atendemos o seu endereço.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b2a5c;--blue:#1565c0;--sky:#e8f3ff;--yellow:#ffd60a;--yellow-d:#f5b800;--tx:#16264a;--mut:#4a5b7d;--ok:#1b7f3b;--warn:#8a5a00;--bad:#b3261e;--r:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:#fff;color:var(--tx);font:17px/1.6 Nunito,system-ui,sans-serif;color-scheme:light}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;color:var(--navy);line-height:1.1;margin:0 0 .4em}
+h1{font-size:clamp(2.3rem,6.5vw,4rem);font-weight:800}h2{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800}h3{font-size:1.3rem;font-weight:600}
+a{color:var(--blue)}:focus-visible{outline:4px solid var(--yellow-d);outline-offset:3px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}section{padding:64px 0}
+.btn{display:inline-flex;align-items:center;gap:8px;font:800 1.05rem "Baloo 2",sans-serif;border:3px solid var(--navy);border-radius:99px;padding:10px 24px;cursor:pointer;text-decoration:none;background:var(--yellow);color:var(--navy);box-shadow:0 5px 0 var(--navy);transition:transform .1s,box-shadow .1s}
+.btn:hover{transform:translateY(2px);box-shadow:0 3px 0 var(--navy)}.btn.azul{background:var(--blue);color:#fff}.btn.zap{background:#25d366;color:#05301a}
+header{position:sticky;top:0;z-index:10;background:var(--yellow);border-bottom:4px solid var(--navy)}
+header .wrap{display:flex;align-items:center;gap:14px;min-height:68px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font:800 1.1rem/1.1 "Baloo 2",sans-serif;margin-right:auto}.logo img{width:44px;height:auto}
+nav{display:flex;gap:2px;flex-wrap:wrap}nav a{padding:6px 12px;border-radius:99px;text-decoration:none;color:var(--navy);font-weight:700}nav a:hover{background:var(--navy);color:var(--yellow)}
+.hero{background:linear-gradient(180deg,var(--sky),#fff);padding:48px 0 24px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.hero p{font-size:1.2rem;color:var(--mut);max-width:48ch}.hero .acoes{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.mascote{position:relative;justify-self:center}.mascote::before{content:"";position:absolute;inset:8% 0 0;background:var(--yellow);border-radius:50%;z-index:0}
+.mascote img{position:relative;z-index:1;width:100%;max-width:340px;height:auto;display:block;animation:flutua 3.2s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.estrada{height:22px;background:repeating-linear-gradient(90deg,var(--yellow) 0 36px,transparent 36px 72px) center/100% 4px no-repeat,var(--navy)}
+.selo{display:inline-block;background:var(--navy);color:var(--yellow);font:800 1rem "Baloo 2",sans-serif;padding:4px 16px;border-radius:99px;margin-bottom:12px}
+.escolas{background:var(--blue);color:#fff;text-align:center}.escolas h2{color:#fff}.escolas p{max-width:60ch;margin:0 auto 26px;color:#e3efff}
+.duo{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:720px;margin:0 auto}
+.escola{background:var(--yellow);color:var(--navy);border:4px solid var(--navy);border-radius:var(--r);padding:24px 16px;box-shadow:0 8px 0 var(--navy)}
+.escola b{display:block;font:800 2rem/1.1 "Baloo 2",sans-serif}.escola span{font-weight:700}
+.pisca{position:relative;display:inline-block;width:72px;vertical-align:middle;margin-left:6px}.pisca img{display:block;width:100%;height:auto}
+.pisca .olho{position:absolute;left:48.3%;top:30.4%;width:15%;height:14%;border-radius:50%;background:#ffdb0f;opacity:0;animation:piscar 4.5s infinite}
+.pisca .olho::after{content:"";position:absolute;left:12%;right:12%;top:18%;height:50%;border-top:3px solid var(--navy);border-radius:100% 100% 0 0}
+@keyframes piscar{0%,86%{opacity:0}88%,95%{opacity:1}97%,100%{opacity:0}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:28px}
+.card{background:var(--sky);border:3px solid var(--navy);border-radius:var(--r);padding:20px}.card .ico{font-size:2.2rem;line-height:1}.card p{margin:0;color:var(--mut)}
+.passos{counter-reset:p;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
+.passos li{counter-increment:p;background:#fff;border:3px dashed var(--blue);border-radius:var(--r);padding:16px 16px 16px 64px;position:relative;font-weight:700}
+.passos li::before{content:counter(p);position:absolute;left:14px;top:12px;width:38px;height:38px;border-radius:50%;background:var(--yellow);border:3px solid var(--navy);display:grid;place-items:center;font:800 1.2rem "Baloo 2",sans-serif;color:var(--navy)}
+.videos{background:var(--sky)}.vlista{display:flex;gap:24px;flex-wrap:wrap;justify-content:center;margin-top:24px}
+.video{width:min(100%,340px);background:#fff;border:4px solid var(--navy);border-radius:var(--r);padding:12px;box-shadow:0 8px 0 var(--navy)}
+.video video{width:100%;border-radius:14px;background:#000;display:block}.video h3{margin:10px 4px 0;font-size:1.1rem}
+.consulta{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+input,select,textarea{font:inherit;width:100%;border:3px solid var(--navy);border-radius:14px;padding:11px 14px;background:#fff;color:var(--tx)}
+label{display:block;font-weight:700;margin:14px 0 4px}.dica{color:var(--mut);font-size:.9rem;margin:6px 0 0}
+.res{margin-top:16px;border-radius:var(--r);padding:16px 18px;border:4px solid;font-weight:700}
+.res.verde{background:#e6f6ea;border-color:var(--ok);color:#0e4d23}.res.amarelo{background:#fff6d6;border-color:var(--yellow-d);color:#5b3b00}.res.vermelho{background:#fdeceb;border-color:var(--bad);color:#7a1610}
+.res p{margin:4px 0 0;font-weight:400}.res .btn{margin-top:12px;font-size:.95rem;padding:6px 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{background:var(--yellow);border:2px solid var(--navy);border-radius:99px;padding:3px 14px;font-weight:700;font-size:.95rem;color:var(--navy)}
+.box{background:#fff;border:4px solid var(--navy);border-radius:var(--r);padding:22px;box-shadow:0 8px 0 var(--navy)}
+.contato{background:var(--yellow)}.contato .box{max-width:640px;margin:0 auto}.botoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+#retorno{margin-top:14px;font-weight:700}.sr{position:absolute;left:-9999px}
+footer{background:var(--navy);color:#cfe0ff;text-align:center;padding:28px 0}footer img{width:60px;height:auto}footer p{margin:6px 0 0}
+@media(max-width:760px){.hero .wrap,.consulta{grid-template-columns:1fr}.mascote{order:-1}.mascote img{max-width:240px}}
+@media(prefers-reduced-motion:reduce){.mascote img,.pisca .olho{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#inicio"><img src="assets/mascote.webp" alt="" width="44" height="61"><span>Tio Rodrigo<br>e Tia Dani</span></a>
+  <nav aria-label="Principal"><a href="#escolas">Escolas</a><a href="#trabalho">Como trabalhamos</a><a href="#videos">Vídeos</a><a href="#consulta">Meu endereço</a><a href="#contato">Contato</a></nav>
+</div></header>
+
+<main>
+<div class="hero" id="inicio"><div class="wrap">
+  <div>
+    <span class="selo">Transporte Escolar</span>
+    <h1>Seu filho a caminho da escola com segurança e carinho</h1>
+    <p>Somos o Tio Rodrigo e a Tia Dani. Levamos e trazemos as crianças das escolas <strong>Intellectus</strong> e <strong>Dias Lemos</strong> todos os dias, e cuidamos de cada uma como se fosse da família.</p>
+    <div class="acoes"><a class="btn" href="#consulta">Consultar meu endereço</a><button class="btn zap" type="button" data-zap="Olá! Gostaria de saber mais sobre o transporte escolar.">Chamar no WhatsApp</button></div>
+  </div>
+  <div class="mascote"><img src="assets/mascote.webp" alt="Polvinho, mascote do transporte escolar, de boné azul, fazendo sinal de positivo" width="340" height="472"></div>
+</div></div>
+<div class="estrada" aria-hidden="true"></div>
+
+<section class="escolas" id="escolas"><div class="wrap">
+  <h2>Escolas que atendemos</h2>
+  <p>Se seu filho estuda em uma dessas escolas e precisa de transporte, fale com a gente! <span class="pisca" aria-hidden="true"><img src="assets/mascote.webp" alt="" width="72" height="100"><i class="olho"></i></span></p>
+  <div class="duo"><div class="escola"><b>Intellectus</b><span>Atendemos esta escola</span></div><div class="escola"><b>Dias Lemos</b><span>Atendemos esta escola</span></div></div>
+</div></section>
+
+<section id="trabalho"><div class="wrap">
+  <h2>Como trabalhamos</h2>
+  <p style="max-width:60ch;color:var(--mut)">Cuidado de verdade começa pela organização. Veja como funciona o nosso dia a dia com as famílias.</p>
+  <div class="cards">
+    <div class="card"><div class="ico" aria-hidden="true">🗺️</div><h3>Rotas por bairro</h3><p>Montamos as rotas por bairro para a criança ter um trajeto organizado todos os dias.</p></div>
+    <div class="card"><div class="ico" aria-hidden="true">📝</div><h3>Contrato digital</h3><p>Sem papelada: a família preenche e assina o contrato pelo celular ou pelo computador.</p></div>
+    <div class="card"><div class="ico" aria-hidden="true">💬</div><h3>Conversa direta</h3><p>Tiramos dúvidas e passamos avisos às famílias pelo WhatsApp, de forma rápida e clara.</p></div>
+    <div class="card"><div class="ico" aria-hidden="true">💛</div><h3>Carinho com cada criança</h3><p>Cada criança é recebida com atenção, com o mesmo cuidado que teríamos com a nossa família.</p></div>
+  </div>
+  <ol class="passos"><li>Consulte se atendemos o seu endereço</li><li>Fale com a gente pelo WhatsApp ou e-mail</li><li>Preencha o contrato digital</li><li>Pronto! A criança entra na rota</li></ol>
+</div></section>
+
+<section class="videos" id="videos"><div class="wrap">
+  <h2>Conheça o nosso transporte</h2>
+  <p style="color:var(--mut)">Vídeos feitos com todo o carinho para as famílias.</p>
+  <div class="vlista" id="vlista"></div>
+</div></section>
+
+<section id="consulta"><div class="wrap consulta">
+  <div>
+    <h2>Atendemos o seu endereço?</h2>
+    <p style="color:var(--mut)">Digite o seu CEP, o bairro ou a rua e veja na hora se a nossa rota passa por aí.</p>
+    <label for="q">CEP, bairro ou rua</label>
+    <input id="q" placeholder="Ex.: 04844-000 ou Jardim Reimberg" autocomplete="off">
+    <p class="dica">O CEP é o jeito mais certo de consultar. Ruas com o mesmo nome em bairros diferentes precisam ser confirmadas por CEP.</p>
+    <button class="btn azul" id="go" type="button" style="margin-top:14px">Verificar</button>
+    <div id="res" class="res" hidden aria-live="polite"></div>
+  </div>
+  <div class="box">
+    <h3>Bairros que atendemos</h3>
+    <div class="chips" id="bairros"></div>
+    <p class="dica">Esta lista é só para consulta. Se o seu bairro não aparece, fale com a gente: podemos avaliar.</p>
+  </div>
+</div></section>
+
+<section class="contato" id="contato"><div class="wrap">
+  <h2 style="text-align:center">Fale com a gente</h2>
+  <div class="box">
+    <form id="form" novalidate>
+      <label for="nome">Seu nome</label><input id="nome" name="nome" required maxlength="80" autocomplete="name">
+      <label for="tel">Telefone com WhatsApp</label><input id="tel" name="telefone" type="tel" required maxlength="20" autocomplete="tel">
+      <label for="end">Bairro ou endereço</label><input id="end" name="endereco" required maxlength="120">
+      <label for="esc">Escola da criança</label>
+      <select id="esc" name="escola" required><option value="">Escolha...</option><option>Intellectus</option><option>Dias Lemos</option><option>Outra escola</option></select>
+      <label for="msg">Mensagem (opcional)</label><textarea id="msg" name="mensagem" rows="3" maxlength="800"></textarea>
+      <div class="botoes">
+        <button class="btn zap" type="submit">Enviar pelo WhatsApp</button>
+        <button class="btn azul" type="button" id="email">Enviar por e-mail</button>
+      </div>
+      <div id="retorno" role="status" aria-live="polite"></div>
+    </form>
+    <p class="dica">Usamos seus dados apenas para falar com você sobre o transporte escolar.</p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <img src="assets/mascote.webp" alt="" width="60" height="83">
+  <p><strong>Transporte Escolar Tio Rodrigo e Tia Dani</strong></p>
+  <p>Atendemos as escolas Intellectus e Dias Lemos</p>
+</div></footer>
+
+<script>
+/* ===== Configuração: preencha antes de publicar ===== */
+const CONFIG = {
+  whatsapp: "",   // número com DDI e DDD, só dígitos. Ex.: 5511999999999
+  formspree: ""   // endereço do formulário no Formspree. Ex.: https://formspree.io/f/xxxxxxxx
+};
+const VIDEOS = [
+  { titulo: "Conheça o nosso transporte", src: "assets/video-transporte.mp4", poster: "assets/video-poster.jpg" }
+];
+const BAIRROS = ["Balneário","Condomínio Flávia","Condomínio Icaraí","Icaraí","Jardim Reimberg","Jardim Santa Francisca Cabrini","Jardim São Bernardo","Jardim São Rafael","Jardim Varginha","Manacá","Maria Antonieta","Palmares","Parque Brasil","Parque São José","Vila Natal"];
+
+const $ = s => document.querySelector(s);
+const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  .replace(/\bjardim\b/g, "jd").replace(/\bparque\b/g, "pq").replace(/\bvila\b/g, "vl").replace(/\bcond(ominio)?\b\.?/g, "cond")
+  .replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+function lev(a, b) { const d = []; for (let i = 0; i <= a.length; i++) d[i] = [i]; for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i-1][j] + 1, d[i][j-1] + 1, d[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1));
+  return d[a.length][b.length]; }
+function achar(nome) {
+  const q = norm(nome); if (!q) return { tipo: "nenhum", lista: [] };
+  const exato = BAIRROS.filter(b => norm(b) === q);
+  if (exato.length) return { tipo: "sim", lista: exato };
+  const parcial = BAIRROS.filter(b => { const n = norm(b); return Math.min(n.length, q.length) >= 5 && ((" " + n + " ").includes(" " + q + " ") || (" " + q + " ").includes(" " + n + " ")); });
+  if (parcial.length) return { tipo: "sim", lista: parcial };
+  const parecido = BAIRROS.filter(b => { const n = norm(b); return n.length >= 6 && lev(n, q) <= (n.length >= 12 ? 3 : 2); });
+  return { tipo: parecido.length ? "parecido" : "nenhum", lista: parecido };
+}
+
+/* ===== Lista de bairros e vídeos ===== */
+BAIRROS.forEach(b => { const s = document.createElement("span"); s.className = "chip"; s.textContent = b; $("#bairros").append(s); });
+VIDEOS.forEach(v => {
+  const d = document.createElement("div"); d.className = "video";
+  d.innerHTML = '<video controls playsinline preload="metadata"></video><h3></h3>';
+  const vid = d.querySelector("video"); vid.src = v.src; vid.poster = v.poster; vid.setAttribute("aria-label", v.titulo);
+  d.querySelector("h3").textContent = v.titulo; $("#vlista").append(d);
+});
+
+/* ===== WhatsApp ===== */
+function abrirZap(texto) {
+  if (!CONFIG.whatsapp) { alert("O número de WhatsApp ainda não foi configurado no arquivo index.html (CONFIG.whatsapp)."); return; }
+  window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto), "_blank", "noopener");
+}
+document.querySelectorAll("[data-zap]").forEach(b => b.onclick = () => abrirZap(b.dataset.zap));
+
+/* ===== Consulta de endereço (somente leitura) ===== */
+function mostrar(cls, titulo, texto, zap) {
+  const r = $("#res"); r.hidden = false; r.className = "res " + cls; r.innerHTML = "<span></span><p></p>";
+  r.firstChild.textContent = titulo; r.querySelector("p").textContent = texto;
+  if (zap) { const b = document.createElement("button"); b.type = "button"; b.className = "btn zap"; b.textContent = "Falar no WhatsApp"; b.onclick = () => abrirZap(zap); r.append(b); }
+}
+async function cep(c) { const r = await fetch("https://viacep.com.br/ws/" + c + "/json/"); return r.json(); }
+const RUA = /^(r|rua|av|avenida|al|alameda|tv|travessa|estrada|estr|pra[cç]a|rod|rodovia|viela|beco|largo)\.?\s/i;
+async function consultar() {
+  const raw = $("#q").value.trim(); if (!raw) { mostrar("amarelo", "Digite algo para consultar", "Informe o CEP, o bairro ou a rua."); return; }
+  const btn = $("#go"); btn.disabled = true; btn.textContent = "Consultando...";
+  try {
+    const dig = raw.replace(/\D/g, "");
+    if (/^\d{8}$/.test(dig) && !/[a-z]/i.test(raw)) {
+      const j = await cep(dig);
+      if (j.erro) return mostrar("amarelo", "CEP não encontrado", "Confira o número digitado ou fale com a gente.", "Olá! Quero saber se atendem o CEP " + raw + ".");
+      const local = [j.logradouro, j.bairro, j.localidade + "/" + j.uf].filter(Boolean).join(", ");
+      const r = achar(j.bairro || "");
+      if (r.tipo === "sim") return mostrar("verde", "Boa notícia! Atendemos o seu bairro", local + ". O bairro " + r.lista[0] + " está na nossa rota. Fale com a gente para combinar tudo.", "Olá! Meu endereço é " + local + " e vi que vocês atendem. Gostaria de mais informações.");
+      return mostrar("vermelho", "Ainda não temos rota nesse bairro", local + ". Mesmo assim, chame a gente: podemos avaliar o seu caso.", "Olá! Meu endereço é " + local + ". Vocês conseguem avaliar um atendimento?");
+    }
+    if (RUA.test(raw) || /\d/.test(raw) || raw.includes(",")) {
+      const rua = raw.split(",")[0].replace(/\b\d+\b/g, "").replace(RUA, "").trim();
+      const resp = rua.length >= 3 ? await (await fetch("https://viacep.com.br/ws/SP/" + encodeURIComponent("São Paulo") + "/" + encodeURIComponent(rua) + "/json/")).json() : [];
+      const nomes = Array.isArray(resp) ? [...new Set(resp.map(x => x.bairro).filter(Boolean))] : [];
+      if (!nomes.length) return mostrar("amarelo", "Não consegui identificar a rua", "Tente com o CEP, que é mais preciso, ou fale com a gente.", "Olá! Quero saber se atendem o endereço: " + raw + ".");
+      const sim = nomes.filter(n => achar(n).tipo === "sim");
+      if (sim.length === nomes.length) return mostrar("verde", "Boa notícia! Atendemos essa rua", "Ela fica em " + nomes.join(" / ") + ", dentro da nossa rota.", "Olá! Meu endereço é " + raw + " e vi que vocês atendem.");
+      if (sim.length) return mostrar("amarelo", "Depende do trecho da rua", "Essa rua passa por mais de um bairro (" + nomes.join(", ") + "). Confirme com o CEP ou fale com a gente.", "Olá! Meu endereço é " + raw + ". Podem confirmar se atendem?");
+      return mostrar("vermelho", "Ainda não temos rota nessa rua", "Ela fica em " + nomes.join(" / ") + ". Chame a gente para avaliarmos o seu caso.", "Olá! Meu endereço é " + raw + ". Vocês conseguem avaliar um atendimento?");
+    }
+    const r = achar(raw);
+    if (r.tipo === "sim") return mostrar("verde", "Boa notícia! Atendemos o bairro " + r.lista[0], "Fale com a gente para combinar tudo.", "Olá! Moro no bairro " + r.lista[0] + " e vi que vocês atendem.");
+    if (r.tipo === "parecido") return mostrar("amarelo", "Você quis dizer: " + r.lista.join(" ou ") + "?", "Confira a escrita ou use o CEP. Se preferir, fale com a gente.", "Olá! Moro no bairro " + raw + ". Vocês atendem?");
+    mostrar("vermelho", "Ainda não temos rota nesse bairro", "Mesmo assim, chame a gente: podemos avaliar o seu caso.", "Olá! Moro no bairro " + raw + ". Vocês conseguem avaliar um atendimento?");
+  } catch (e) {
+    mostrar("amarelo", "Não foi possível consultar agora", "Verifique a internet e tente de novo, ou fale com a gente.", "Olá! Quero saber se atendem o endereço: " + raw + ".");
+  } finally { btn.disabled = false; btn.textContent = "Verificar"; }
+}
+$("#go").onclick = consultar;
+$("#q").onkeydown = e => { if (e.key === "Enter") consultar(); };
+
+/* ===== Contato por WhatsApp ou e-mail ===== */
+const form = $("#form"), retorno = $("#retorno");
+const corpo = () => ["Olá! Meu nome é " + $("#nome").value.trim() + ".", "Telefone: " + $("#tel").value.trim(), "Bairro/endereço: " + $("#end").value.trim(), "Escola: " + $("#esc").value, $("#msg").value.trim() && "Mensagem: " + $("#msg").value.trim()].filter(Boolean).join("\n");
+function valido() { form.classList.add("tentou"); if (form.checkValidity()) return true; retorno.textContent = "Preencha nome, telefone, endereço e escola para continuar."; form.querySelector(":invalid").focus(); return false; }
+form.addEventListener("submit", e => { e.preventDefault(); if (!valido()) return; retorno.textContent = ""; abrirZap(corpo()); });
+$("#email").onclick = async () => {
+  if (!valido()) return;
+  if (!CONFIG.formspree) { retorno.textContent = "O envio por e-mail ainda não foi configurado. Use o WhatsApp."; return; }
+  const b = $("#email"); b.disabled = true; retorno.textContent = "Enviando...";
+  try {
+    const fd = new FormData(form); fd.append("_subject", "Contato pelo site do transporte");
+    const r = await fetch(CONFIG.formspree, { method: "POST", body: fd, headers: { Accept: "application/json" } });
+    if (r.ok) { retorno.textContent = "Mensagem enviada! Em breve entramos em contato. 💛"; form.reset(); form.classList.remove("tentou"); }
+    else throw new Error("falha");
+  } catch (err) { retorno.textContent = "Não foi possível enviar agora. Tente pelo WhatsApp."; }
+  finally { b.disabled = false; }
+};
+</script>
+</body>
+</html>
